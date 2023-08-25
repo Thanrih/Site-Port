@@ -1,9 +1,14 @@
 @import url('https://googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@font-face {
+    font-family: 'Pixel-art-font'; /* Nome da fonte personalizada */
+    src: url('/fonts/lunchds.ttf') format('truetype'); /* Caminho para a fonte e formato */
+    /* Outras propriedades opcionais, como font-weight e font-style, podem ser definidas aqui */
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Pixel-art-font', sans-serif;
 }
 body{
     min-height: 100vh;
@@ -18,6 +23,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10000;
 }
 header .logo{
     color: #fff;
@@ -49,8 +55,20 @@ header ul li a.active{
 section{
     position: relative;
     width: 100%;
-    height: 100%;
-    padding:100vh;
+    height: 100vh;
+    padding:100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#fdd69f #e7aa97);
 }
 section img{
     position: absolute;
@@ -59,4 +77,40 @@ section img{
     width: 100%;
     height: 100vh;
     object-fit:cover;
+    pointer-events: none;
+}
+
+#btw{
+    text-decoration: none;
+    font-family: 'Pixel-art-font', sans-serif;
+    padding: 8px 30px;
+    border-radius: 40px;
+    outline: solid #fff;
+    color: #ffffff;
+    white-space: nowrap;
+    font-size: 1.5vw;
+    z-index: 9;
+    transform: translateY(230px);
+    
+}
+.sec{
+    position: relative;
+    padding:100px;
+    background: #FDD69F;
+}
+.sec h2{
+    text-align: center;
+    font-size: 3.4em;
+    margin-bottom: 10px;
+    color: #BD746D;
+}
+
+.sec p{
+    white-space: pre-line;
+    line-height: 1.0cm;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: #BD746D;
+
 }
