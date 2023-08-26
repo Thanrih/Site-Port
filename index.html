@@ -14,7 +14,7 @@
             <img src="artes/arvore.png" id="arvore">
             <img src="artes/passaros.png" id="passaros">
             <img src="artes/ilhas.png" id="ilhas">
-            <a href="#" id="btw">Explore</a>
+            <a href="#sec" id="btw">Explore</a>
             <img src="artes/nuvens_frente.png" id="nuvens_frente">
 
         </section>
@@ -28,7 +28,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </header>
-        <div class="sec">
+        <div class="sec" id="sec">
             <h2>Eternal</h2>
             <p>Lost sights of broken homes
                 If you can live on your own
@@ -53,5 +53,25 @@
                 I'll say goodbye now
                 </p>
         </div>
+        <script>
+            let estrelas = document.getElementById('estrelas');
+            let nuvens_atras = document.getElementById('nuvens_atras');
+            let arvore = document.getElementById('arvore');
+            let passaros = document.getElementById('passaros');
+            let ilhas = document.getElementById('ilhas');
+            let nuvens_frente = document.getElementById('nuvens_frente');
+            let header = document.querySelector('header')
+
+            window.addEventListener('scroll',function(){
+                let value = window.scrollY;
+                estrelas.style.left = value * 0.7+ 'px';
+                arvore.style.top =value * 0.5 + 'px';
+                passaros.style.top =value * 0.6 + 'px';
+                nuvens_atras.style.top =value * 0.7 + 'px';
+                ilhas.style.top =value * 0.5 + 'px';
+                header.style.top = value * 0.6 + 'px';
+
+            })
+        </script>
     </body>
 </html>
