@@ -98,6 +98,7 @@ section img {
     position: relative;
     padding:100px;
     background: #FDD69F;
+    border:solid #FDD69F 5px;
 }
 .sec h2{
     text-align: center;
