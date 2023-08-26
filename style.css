@@ -10,11 +10,13 @@
     box-sizing: border-box;
     font-family: 'Pixel-art-font', sans-serif;
     scroll-behavior: smooth;
+    
 }
 body{
     min-height: 100vh;
     background:linear-gradient(#5B7496,#5B7496) ;
     overflow-x: hidden;
+
 }
 header{
     position: absolute;
@@ -22,6 +24,7 @@ header{
     left: 0;
     width: 100%;
     padding: 30px 100px 0px 3vh;
+    font-size: 2vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,41 +57,45 @@ header ul li a:hover,
 header ul li a.active{
     outline: solid 2px #fff;
 }
-section{
-    position: relative;
-    width: 100;
-    height: 100vh;
-    padding:100px;
+section {
+    width: 100%;
+    height: 260vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-
+    position: relative;
+    overflow: hidden;
+    bottom: 0;
 }
 
-section img{
+section img {
     position: absolute;
     top: 0;
-    left:0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    object-fit:cover;
-    pointer-events: none;
+    height:100%; /* Define a altura para que a imagem mantenha a proporção */
+    object-fit: cover;
+    bottom: 0;
+}
+#arvore{
+    transform: translateY(-30px);
 }
 
 #btw{
+    position: relative;
     text-decoration: none;
-    font-family: 'Pixel-art-font', sans-serif;
     padding: 8px 30px;
     border-radius: 40px;
     outline: solid #fff;
     color: #ffffff;
-    white-space: nowrap;
-    font-size: 0.5cm;
+    font-size:3.5vh;
     z-index: 9;
-    transform: translateY(230px);
-    
+    transform: translateY(-50vh);
+    align-items: center;
+
 }
 .sec{
+    z-index:12;
     position: relative;
     padding:100px;
     background: #FDD69F;
