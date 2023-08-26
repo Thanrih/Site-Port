@@ -70,18 +70,19 @@ section {
 
 section img {
     position: absolute;
-
+    top: 0;
+    left: 0;
     width: 100%;
     height:100%; /* Define a altura para que a imagem mantenha a proporção */
     object-fit: cover;
-    transform: translateY(2px);
+    bottom: 0;
 }
 #arvore{
     transform: translateY(-30px);
 }
 
 #btw{
-    position: relative;
+    position: static;
     text-decoration: none;
     padding: 8px 30px;
     border-radius: 40px;
@@ -98,7 +99,6 @@ section img {
     position: relative;
     padding:100px;
     background: #FDD69F;
-    border:solid #FDD69F 5px;
 }
 .sec h2{
     text-align: center;
