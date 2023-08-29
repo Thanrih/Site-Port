@@ -71,15 +71,14 @@
 
             window.addEventListener('scroll',function(){
                 let value = window.scrollY;
-                estrelas.style.left = value * 0.3+ 'px';
-                arvore.style.top =value * 0.7 + 'px';
-                passaros.style.top =value * 0.6 + 'px';
-                nuvens_atras.style.top =value * 0.8 + 'px';
-                ilhas.style.top =value * 0.78 + 'px';
-                header.style.top = value * 0.8 + 'px';
-                nuvem1.style.top = value * 0.1 + 'px';
-                nuvem2.style.top = value * 0.2 + 'px';
-                btw.style.top = value * 0.8 + 'px';
+                estrelas.style.left = value * 0.034+ 'vw';
+                arvore.style.top =value * 0.02 + 'vw';
+                passaros.style.top =value * 0.02 + 'vw';
+                nuvens_atras.style.top =value * 0.035 + 'vw';
+                ilhas.style.top =value * 0.033 + 'vw';
+                header.style.top = value * 0.008 + 'vw';
+                nuvem2.style.top = value * 0.002 + 'vw';
+                btw.style.top = value * 0.08 + 'vw';
                 btw.style.opacity = 1 - value / 400 ;})
             window.addEventListener('mousemove', function (event) {
             let mouseX = event.clientX;
