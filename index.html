@@ -60,6 +60,10 @@
                 </p>
         </div>
         <script>
+            const audio = document.getElementById('background-audio');
+            audio.volume = 0.2;
+            audio.play();
+            
             let estrelas = document.getElementById('estrelas');
             let nuvens_atras = document.getElementById('nuvens_atras');
             let arvore = document.getElementById('arvore');
@@ -96,10 +100,6 @@
 
 
             }
-           
-            const audio = document.getElementById('background-audio');
-            audio.volume = 0.2;
-            audio.play();
         </script>
     </body>
 </html>
