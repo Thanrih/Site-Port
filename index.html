@@ -71,12 +71,12 @@
 
             window.addEventListener('scroll',function(){
                 let value = window.scrollY;
-                estrelas.style.left = value * 0.034+ 'vw';
-                arvore.style.top =value * 0.037 + 'vw';
+                estrelas.style.left = value * 0.034 + 'vw';
+                arvore.style.top =value * 0.035 + 'vw';
                 passaros.style.top =value * 0.02 + 'vw';
-                nuvens_atras.style.top =value * 0.045 + 'vw';
+                nuvens_atras.style.top =value * 0.036 + 'vw';
                 ilhas.style.top =value * 0.033 + 'vw';
-                header.style.top = value * 0.008 + 'vw';
+                header.style.top = value * 0.06 + 'vw';
                 nuvem2.style.top = value * 0.002 + 'vw';
                 btw.style.top = value * 0.08 + 'vw';
                 btw.style.opacity = 1 - value / 400 ;})
@@ -88,10 +88,10 @@
             function updateParallax(mouseX = 0, mouseY = 0) {
                 let value = window.scrollY;
                 arvore.style.transform = `translate(${mouseX * -0.02}px, ${mouseY * -0.02}px)`;
-                ilhas.style.transform = `translate(${mouseX * 0.01}px, ${mouseY * 0.01}px)`;
+                ilhas.style.transform = `translate(${mouseX * -0.01}px, ${mouseY * -0.01}px)`;
                 nuvens_atras.style.transform = `translate(${mouseX * 0.000}px, ${mouseY * -0.01}px)`;
-                nuvem1.style.transform = `translate(${mouseX * 0.0}px, ${mouseY * 0.01}px)`;
-                nuvem2.style.transform = `translate(${mouseX * 0.0}px, ${mouseY * -0.01}px)`;
+                nuvem1.style.transform = `translate(${mouseX * 0.0}px, ${mouseY * 0.02}px)`;
+                nuvem2.style.transform = `translate(${mouseX * 0.0}px, ${mouseY * -0.03}px)`;
                 passaros.style.transform = `translate(${mouseX * -0.01}px, ${mouseY * -0.01}px)`;
 
 
