@@ -109,9 +109,10 @@ section img {
 
 .sec p{
     white-space: pre-line;
-    line-height: 1.0cm;
+    line-height: 1.3cm;
+    font-size: 1.5em;
     margin-bottom: 10px;
-    padding-top: 10px;
+    padding-top: 50px;
     text-align: center;
     color: #BD746D;
 
