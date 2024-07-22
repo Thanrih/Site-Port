@@ -92,6 +92,23 @@ section img {
     align-items: center;
 
 }
+
+.horizontal-list{
+    width: 100%;
+    display: flex;
+    gap: 4vh;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    bottom: 0;
+}
+.W-H-desc{
+    color: white;
+    text-align: center;
+    font-size: 4vh;
+}
 .sec{
     z-index:12;
     position: relative;
