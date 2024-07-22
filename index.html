@@ -8,91 +8,91 @@
         <link rel="stylesheet2" href="path/to/atropos.css" />
     </head>
     <body>
-        
-        <section>
-            <img src="artes/estrelas.png" id="estrelas">
-            <img src="artes/nuvens_atrás.png" id="nuvens_atras">
-            <img src="artes/passaros_animaçao.gif" id="passaros">
-            <img src="artes/arvore.gif" id="arvore">
-            <img src="artes/ilhas.png" id="ilhas">
-            <img src="artes/nuvens_2.png" id="nuvem2">
-            <img src="artes/nuvens_1.png" id="nuvem1">
-            <a href="#sec" id="btw">Explore</a>
-            <img src="artes/nuvens_frente.png" id="nuvens_frente">
-
-        </section>
         <header>
             <a href="#" class="logo">Hope</a>
-            <!--            Parallax-->
             <ul>
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Works</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Trabalhos</a></li>
+                <li><a href="#About_me">Conhecimentos</a></li>
+                <li><a href="#Contact">Contato</a></li>
             </ul>
         </header>
-        <div class="sec" id="sec">
-            <h2>Eternal</h2>
-            <p>Lost sights of broken homes
-                If you can live on your own
-                I'll fade away
-                Wide skies in open suns
-                If you can breathe in return
-                I'll say goodbye now
-                I tried really hard to go my own way without looking back
-                I started walking but the truth is I'm not feeling lonely
-                There is no sadness here
-                I am not alone, you're still here with me, somewhere, I can feel it
-                I promise nothing will ever tear us apart
-                Among countless stars, the person I met was you
-                And I will stay by your side as your guiding light in the dark
-                Endless days upon endless nights
-                We are eternal
-                Lost sights of broken homes
-                If you can live on your own
-                I'll fade away
-                Wide skies in open suns
-                If you can breathe in return
-                I'll say goodbye now
-                </p>
+        <section>
+            <img src="artes/estrelas.png" class="img_anim" id="estrelas">
+            <img src="artes/nuvens_atrás.png" class="img_anim" id="nuvens_atras">
+            <img src="artes/passaros_animaçao.gif" class="img_anim" id="passaros">
+            <img src="artes/arvore.gif" class="img_anim" id="arvore">
+            <img src="artes/ilhas.png" class="img_anim" id="ilhas">
+            <img src="artes/nuvens_2.png" class="img_anim" id="nuvem2">
+            <img src="artes/nuvens_1.png" class="img_anim" id="nuvem1">
+            <a href="#sec" id="btw">My Work</a>
+            <img src="artes/nuvens_frente.png" class="img_anim" id="nuvens_frente">
+        </section>
+    
+        <div class="contact" id="Contact"></div>
+        
+        <!-- Dialog Box -->
+        <div class="dialog-box" id="dialog-box">
+            <div class="dialog-content">
+                
+            </div>
+        </div>
+        <div class="dialog-box" id="dialog-box">
+            <div class="dialog-content">
+                <!-- Conteúdo da caixa de diálogo, por exemplo, uma lista horizontal -->
+                <ul class="horizontal-list">
+                    
+                </ul>
+            </div>
         </div>
         <script>
             let estrelas = document.getElementById('estrelas');
-            let nuvens_atras = document.getElementById('nuvens_atras');
-            let arvore = document.getElementById('arvore');
-            let passaros = document.getElementById('passaros');
-            let ilhas = document.getElementById('ilhas');
-            let nuvens_frente = document.getElementById('nuvens_frente');
-            let header = document.querySelector('header')
-            let btw = document.getElementById('btw')
+let nuvens_atras = document.getElementById('nuvens_atras');
+let arvore = document.getElementById('arvore');
+let passaros = document.getElementById('passaros');
+let ilhas = document.getElementById('ilhas');
+let nuvens_frente = document.getElementById('nuvens_frente');
+let header = document.querySelector('header');
+let btw = document.getElementById('btw');
+let dialogBox = document.getElementById('dialog-box');
 
-            window.addEventListener('scroll',function(){
-                let value = window.scrollY;
-                estrelas.style.left = value * 0.3 + 'px';
-                arvore.style.top =value * 0.3 + 'px';
-                passaros.style.top =value * 0.2 + 'px';
-                nuvens_atras.style.top =value * 0.5 + 'px';
-                ilhas.style.top =value * 0.4 + 'px';
-                header.style.top = value * 0.6 + 'px';
-                nuvem2.style.top = value * 0.02 + 'px';
-                btw.style.top = value * 0.3 + 'px';
-                btw.style.opacity = 1 - value / 400 ;})
-            window.addEventListener('mousemove', function (event) {
-                let mouseX = event.clientX;
-                let mouseY = event.clientY;
-            updateParallax(mouseX, mouseY);});
+window.addEventListener('scroll', function() {
+    let value = window.scrollY;
+    estrelas.style.left = value * 0.3 + 'px';
+    arvore.style.top = value * 0.3 + 'px';
+    passaros.style.top = value * 0.2 + 'px';
+    nuvens_atras.style.top = value * 0.5 + 'px';
+    ilhas.style.top = value * 0.4 + 'px';
+    header.style.top = value * 0.6 + 'px';
+    nuvem2.style.top = value * 0.02 + 'px';
+    btw.style.top = value * 0.3 + 'px';
+    btw.style.opacity = 1 - value / 400;
+    dialogBox.style.top = 5+(value*0.04 + 'px');
 
-            function updateParallax(mouseX = 0, mouseY = 0) {
-                let value = window.scrollY;
-                arvore.style.transform = `translate(${mouseX * -0.02}px, ${mouseY * -0.02}px)`;
-                ilhas.style.transform = `translate(${mouseX * -0.01}px, ${mouseY * -0.01}px)`;
-                nuvens_atras.style.transform = `translate(${mouseX * 0.000}px, ${mouseY * -0.01}px)`;
-                nuvem1.style.transform = `translate(${mouseX * 0.0}px, ${mouseY * 0.02}px)`;
-                nuvem2.style.transform = `translate(${mouseX * 0.0}px, ${mouseY * -0.03}px)`;
-                passaros.style.transform = `translate(${mouseX * -0.01}px, ${mouseY * -0.01}px)`;
+    // Mostrar caixa de diálogo ao rolar para uma certa posição
+    if (value > 670 && value <1300) { // Ajuste este valor conforme necessário
+        dialogBox.classList.add('active');
+    } else {
+        dialogBox.classList.remove('active');
+    }
+});
 
+window.addEventListener('mousemove', function(event) {
+    let mouseX = event.clientX;
+    let mouseY = event.clientY;
+    updateParallax(mouseX, mouseY);
+});
 
-            }
+function updateParallax(mouseX = 0, mouseY = 0) {
+    let value = window.scrollY;
+    arvore.style.transform = `translate(${mouseX * -0.02}px, ${mouseY * -0.02}px)`;
+    ilhas.style.transform = `translate(${mouseX * -0.01}px, ${mouseY * -0.01}px)`;
+    nuvens_atras.style.transform = `translate(${mouseX * 0.000}px, ${mouseY * -0.01}px)`;
+    nuvem1.style.transform = `translate(${mouseX * 0.0}px, ${mouseY * 0.02}px)`;
+    nuvem2.style.transform = `translate(${mouseX * 0.0}px, ${mouseY * -0.03}px)`;
+    passaros.style.transform = `translate(${mouseX * -0.01}px, ${mouseY * -0.01}px)`;
+}
+
         </script>
     </body>
 </html>
