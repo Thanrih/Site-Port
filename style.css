@@ -1,24 +1,24 @@
-@import url('https://googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
 @font-face {
-    font-family: 'Pixel-art-font'; /* Nome da fonte personalizada */
-    src: url('/fonts/lunchds.ttf') format('truetype'); /* Caminho para a fonte e formato */
-    /* Outras propriedades opcionais, como font-weight e font-style, podem ser definidas aqui */
+    font-family: 'Pixel-art-font';
+    src: url('fonts/lunchds.ttf') format('truetype'); 
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Pixel-art-font', sans-serif;
     scroll-behavior: smooth;
-    
 }
-body{
-    min-height: 100vh;
-    background:linear-gradient(#5B7496,#5B7496) ;
-    overflow-x: hidden;
 
+body {
+    background: linear-gradient(#5B7496, #5B7496);
+    overflow-x: hidden;
 }
-header{
+
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,7 +30,8 @@ header{
     align-items: center;
     z-index: 10000;
 }
-header .logo{
+
+header .logo {
     color: #fff;
     font-weight: 700;
     text-decoration: none;
@@ -38,25 +39,30 @@ header .logo{
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-header ul{
+
+header ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 header ul li {
     list-style: none;
     margin-left: 20px;
 }
-header ul li a{
+
+header ul li a {
     text-decoration: none;
     padding: 5px 13px;
     color: #fff;
     border-radius: 20px;
 }
+
 header ul li a:hover, 
-header ul li a.active{
+header ul li a.active {
     outline: solid 2px #fff;
 }
+
 section {
     width: 100%;
     height: 260vh;
@@ -73,56 +79,80 @@ section img {
     top: 0;
     left: 0;
     width: 100%;
-    height:100%; /* Define a altura para que a imagem mantenha a proporção */
+    height: 100%;
     object-fit: cover;
-
 }
 
+.competencias {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-content: center;
+}
 
-#btw{
+#btw {
     position: static;
     text-decoration: none;
     padding: 8px 30px;
     border-radius: 40px;
     outline: solid #fff;
     color: #ffffff;
-    font-size:3.5vh;
+    font-size: 3.5vh;
     z-index: 9;
     transform: translateY(-50vh);
     align-items: center;
-
 }
 
-.horizontal-list{
-    width: 100%;
+.About {
     display: flex;
-    gap: 4vh;
-    list-style-type: none;
+    width: 200vh;
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
-    bottom: 0;
+    background: url('artes/CAIXA DIALOG.png') no-repeat center center fixed;
+    background-position:center;
+    background-size: cover;
 }
-.W-H-desc{
+
+.horizontal-list {
+    padding: 0;
+    display: flex;
+    gap: 7vh;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontal-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.W-H-desc {
     color: white;
     text-align: center;
     font-size: 4vh;
 }
-.sec{
-    z-index:12;
+
+.sec {
+    z-index: 12;
     position: relative;
-    padding:100px;
+    padding: 100px;
     background: #FDD69F;
 }
-.sec h2{
+
+.sec h2 {
     text-align: center;
     font-size: 3.4em;
     margin-bottom: 10px;
     color: #BD746D;
 }
 
-.sec p{
+.sec p {
     white-space: pre-line;
     line-height: 1.3cm;
     font-size: 1.5em;
@@ -130,5 +160,40 @@ section img {
     padding-top: 50px;
     text-align: center;
     color: #BD746D;
+}
 
+/* Dialog Box CSS */
+.dialog-box {
+    position: fixed;
+    overflow: unset;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 20vh;
+    background: url('artes/CAIXA\ DIALOG.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+    padding-left: 80vh;
+    padding-top: 50vh;
+    padding-right: 80vh;
+    padding-bottom: 50vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease, visibility 100s ease;
+}
+
+.dialog-box.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dialog-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
